@@ -1,0 +1,133 @@
+<!--
+  hes06-33t.dtd
+  derived from:
+  losfile.dtd
+  DTD for the bible texts of the freeware watchwords programs.
+  Version 06t-33:
+  last changes:
+  attribute kni
+  attribute c
+-->
+
+<!ENTITY % Books 
+  "(Gn || Ex | Lv | Nu | Dt | Jos | Jdc | Rth | 1Sm | 2Sm | 
+    1Rg | 2Rg | 1Chr | 2Chr | Esr | Neh | Esth | Job | Ps | Prv | Eccl | 
+    Ct | Is | Jr | Thr | Ez | Dn | Hos | Joel | Am | Ob | Jon | 
+    Mch | Nah | Hab | Zph | Hgg | Zch | Ml |
+    Mt | Mc | L | J | Act | R | 1K | 2K | G | E | Ph | Kol | 
+    1Th | 2Th | 1T | 2T | Tt | Phm | H | Jc | 1P | 2P | 1J |
+    2J | 3J | Jd | Ap)">
+
+<!ENTITY % Line "(#PCDATA | X | EM)*">
+
+<!-- Top level structure -->
+
+<!ELEMENT LOSFILE    (HEAD, (YEAR | MONTH | WEEK | DAY | LOSUNG)+)>
+<!ATTLIST LOSFILE    dtdmainvers CDATA  #FIXED "1"
+                     dtdsubvers  CDATA  #IMPLIED
+                     xml:lang    NMTOKEN #REQUIRED
+                     year        CDATA  #REQUIRED
+>
+<!ELEMENT HEAD      (FILEVERS, XLAT, SUBLANG*)>
+<!ELEMENT FILEVERS  (#PCDATA)>
+<!ELEMENT XLAT      (#PCDATA)>
+
+<!-- language info -->
+
+<!ELEMENT SUBLANG    (TLPATTERN, MONTHS, DOW)>
+<!ATTLIST SUBLANG    subcode     CDATA  #REQUIRED
+>
+
+<!ELEMENT TLPATTERN  %Line;>
+
+<!ELEMENT MONTHS     EMPTY>
+<!ATTLIST MONTHS     jan        CDATA  #REQUIRED
+                     feb        CDATA  #REQUIRED
+                     mar        CDATA  #REQUIRED
+                     apr        CDATA  #REQUIRED
+                     may        CDATA  #REQUIRED
+                     jun        CDATA  #REQUIRED
+                     jul        CDATA  #REQUIRED
+                     aug        CDATA  #REQUIRED
+                     sep        CDATA  #REQUIRED
+                     oct        CDATA  #REQUIRED
+                     nov        CDATA  #REQUIRED
+                     dec        CDATA  #REQUIRED
+>
+
+<!ELEMENT DOW        EMPTY>
+<!ATTLIST DOW        sun        CDATA  #REQUIRED
+                     mon        CDATA  #REQUIRED
+                     tue        CDATA  #REQUIRED
+                     wed        CDATA  #REQUIRED
+                     thu        CDATA  #REQUIRED
+                     fri        CDATA  #REQUIRED
+                     sat        CDATA  #REQUIRED
+>
+
+<!-- Non-watchwords info (calendar etc.) -->
+
+<!ELEMENT YEAR       (TL, S, IL?, L+, SL)>
+<!ATTLIST YEAR       y          CDATA  #REQUIRED>
+
+<!ELEMENT MONTH      (TL, S, IL?, L+, SL)>
+<!ATTLIST MONTH      m          CDATA  #REQUIRED>
+
+<!ELEMENT WEEK       (S, IL?, L+, SL)>
+<!ATTLIST WEEK       d          CDATA  #REQUIRED
+                     m          CDATA  #REQUIRED
+                     ord        CDATA  #IMPLIED
+>
+<!ELEMENT DAY        ((S, IL?, L+, SL, SR?, CR?, C?)?)>
+<!ATTLIST DAY        d          CDATA  #REQUIRED
+                     m          CDATA  #REQUIRED
+                     type (sunday | holiday | important | week) "important"
+                     ord        CDATA  #IMPLIED
+		     label	CDATA  #IMPLIED
+                     name       CDATA  #REQUIRED
+                     meaning    CDATA  #IMPLIED
+                     src	CDATA  #IMPLIED
+>  
+
+<!-- Structure for one watch word (one day) -->
+
+<!ELEMENT LOSUNG     (TL, OT, NT, TT?, SR?, CR?, C?)>
+<!ATTLIST LOSUNG     d          CDATA  #REQUIRED
+                     m          CDATA  #REQUIRED
+>
+
+<!ELEMENT OT         (S, IL?, L+, SL)>
+<!ELEMENT NT         (S, IL?, L+, SL)>
+
+<!ELEMENT TT         (L+, SL)>
+
+<!ELEMENT S          EMPTY>
+<!ATTLIST S          b          CDATA  #REQUIRED
+                     kni        CDATA  #IMPLIED
+                     ch         CDATA  #IMPLIED
+                     v          CDATA  #REQUIRED
+                     r2         CDATA  #IMPLIED
+                     ch2        CDATA  #IMPLIED
+                     v2         CDATA  #IMPLIED
+                     r3         CDATA  #IMPLIED
+                     ch3        CDATA  #IMPLIED
+                     v3         CDATA  #IMPLIED
+                     r4         CDATA  #IMPLIED
+                     ch4        CDATA  #IMPLIED
+                     v4         CDATA  #IMPLIED
+                     n          CDATA  #IMPLIED
+                     tr         CDATA  #IMPLIED
+>
+
+<!ELEMENT TL         %Line;>
+<!ELEMENT IL         %Line;>
+<!ELEMENT SL         %Line;>
+<!ELEMENT SR         (S*, SL)>
+<!ELEMENT CR         (S?, SL)>
+<!ELEMENT C          (L)+>
+<!ELEMENT L          %Line;>
+
+
+<!ELEMENT X          (#PCDATA)>
+<!ELEMENT EM         (#PCDATA)>
+

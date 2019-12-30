@@ -1,0 +1,51 @@
+/**
+ * author: Joachim Reiss
+ */
+
+
+// respective year = XXYY
+// e.g. XX=20 YY=13 for the year 2013
+
+
+1. Go to http://hesla.dulos.cz/srcXXYY .
+
+2. Download
+    hesYY-01.xml
+    and
+    hesYY.dtd
+    and save it to this folder.
+
+3. Open terminal.
+
+4. Enter:
+
+    perl day_into_losung.pl hesYY-01.xml > hesYY-01_Sonntag.xml
+
+5. Start IntelliJ.
+
+6. Make sure that XSLT Plugin is installed.
+
+7. Open czechLosungenTransform.xsl and change 
+	<xsl:element name="Datum">2014 
+   to the right year
+
+8. Right Click on the czechLosungenTransform.xsl. Choose "Create czechLosungenTransform.xsl" in the menu. The option should have an XSLT icon next to it.
+
+9. In the upcoming window, create a new XSLT runnable configuration using
+    czechLosungenTransform.xsl as the script file
+    and
+    hesYY-01_Sonntag.xml as the input file
+    and
+    resultXXYY.xml as the resulting file in the "save to file" input box.
+
+9. Run the newly created runnable configuration.
+
+10. The correct Losungen xml file resultXXYY.xml should now be created.
+
+11. In resultXXYY.xml
+
+replace
+<FreeXml xmlns:ns0="http://tempuri.org/FreeXml.xsd">
+
+with
+<FreeXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://losungen.de/losungen.xsd">

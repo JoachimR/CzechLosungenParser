@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="FreeXml" type="Losungen">
+	</xs:element>
+	<xs:complexType name="Losungen">
+		<xs:sequence>
+			<xs:element name="Losungen" type="Losung" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Losungen">
+		<xs:sequence>
+			<xs:element name="Datum" type="xs:string"/>
+			<xs:element name="Wtag" type="xs:string"/>
+			<xs:element name="Sonntag" type="xs:string"/>
+			<xs:element name="Losungstext" type="xs:string"/>
+			<xs:element name="Losungsvers" type="xs:string"/>
+			<xs:element name="Lehrtext" type="xs:string"/>
+			<xs:element name="Lehrtextvers" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
