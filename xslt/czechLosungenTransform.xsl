@@ -18,7 +18,7 @@
         <xsl:element name="Losungen">
 
 
-            <xsl:element name="Datum">2020-<xsl:if test="string-length(@m) &lt; 2">0</xsl:if><xsl:value-of select="@m"/>-<xsl:if test="string-length(@d) &lt; 2">0</xsl:if><xsl:value-of select="@d"/></xsl:element>
+            <xsl:element name="Datum">2021-<xsl:if test="string-length(@m) &lt; 2">0</xsl:if><xsl:value-of select="@m"/>-<xsl:if test="string-length(@d) &lt; 2">0</xsl:if><xsl:value-of select="@d"/></xsl:element>
 
             <xsl:element name="Sonntag">
                 <xsl:value-of select="Sonntag"/>
