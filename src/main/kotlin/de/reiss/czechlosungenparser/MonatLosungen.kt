@@ -3,24 +3,24 @@ package de.reiss.czechlosungenparser
 import java.util.*
 
 fun main() {
-    val inCzech =
-        "@Mnozí se ptají: Kdo ukáže nám, co je dobré? Dej dopadat na nás světlu tváře své, ó Bože.@Žalm 4,7 F" +
-                "@Radujte se, že vaše jména jsou zapsána v nebesích.@Lukáš 10,20" +
-                "@Pravím vám, budou-li oni mlčet, bude volat kamení.@Lukáš 19,40" +
-                "@Kristus je obraz Boha neviditelného, prvorozený všeho stvoření.@Koloským 1,15" +
-                "@Otevři svá ústa za němého, za právo všech postižených.@Přísloví 31,8" +
-                "@Boha je třeba víc poslouchat než lidi.@Skutky 5,29" +
-                "c@Bůh od nikoho z nás není daleko. V něm totiž žijeme, hýbáme se a jsme.@Skutky 17,27 P" +
-                "@Nakloň, Hospodine, své ucho a slyš, otevři, Hospodine, své oči a viz!@2.Královská 19,16" +
-                "@Sejete mnoho, a sklízí se málo. Jen jezte, nenasytíte se; jen pijte, žízeň neuhasíte; jen se oblékejte, nezahřejete se. Kdo se dává najmout za mzdu, ukládá ji do děravého váčku.@Aggeus 1,6" +
-                "@Mějme zájem jeden o druhého a povzbuzujme se k lásce a k dobrým skutkům.@Židům 10,24" +
-                "@Pán nechť řídí vaše srdce k Boží lásce a k trpělivosti Kristově.@2.Tesalonickým 3,5" +
-                "@Plesej a raduj se, sijónská dcero, neboť už přicházím a budu bydlet uprostřed tebe, je výrok Hospodinův.@Zachariáš 2,14"
+    val inCzech = "@Ježíš Kristus praví: Pojďte a uvidíte!@Jan 1,39" +
+            "@Hněváte-li se, nehřešte. Nenechte nad svým hněvem zapadnout slunce.@Efezským 4,26" +
+            "@V každý čas se v Duchu svatém modlete a proste, bděte na modlitbách a vytrvale se přimlouvejte za všechny bratry.@Efezským 6,18" +
+            "@Marie Magdalská šla k učedníkům a oznámila jim: Viděla jsem Pána a toto mi řekl.@Jan 20,18" +
+            "@Modlím se za tebe, milovaný, aby se ti ve všem dobře dařilo a abys byl zdráv – tak jako se dobře daří tvé duši.@3.Janova 1,2" +
+            "@Polož si mě na srdce jako pečeť, jako pečeť na své rámě. Vždyť silná jako smrt je láska.@Píseň 8,6" +
+            "@Po Bohu žízním, po živém Bohu.@Žalm 42,3" +
+            "@Tehdy zaplesají stromy v lese vstříc Hospodinu, že přichází soudit zemi.@1.Paralipomenon 16,33" +
+            "@Láska k Bohu je ta nejvznešenější moudrost.@Sírachovec 1,10 L17" +
+            "@Veliké a podivuhodné jsou tvé činy, Pane Bože všemohoucí; spravedlivé a pravdivé jsou tvé cesty, Králi národů.@Zjevení 15,3" +
+            "@Běda těm, kdo říkají zlu dobro a dobru zlo, kdo vydávají tmu za světlo a světlo za tmu, kdo vydávají hořké za sladké a sladké za hořké!@Izaiáš 5,20" +
+            "@Vlk bude pobývat s beránkem, levhart s kůzletem odpočívat. Tele a lvíče i žírný dobytek budou spolu a malý hoch je bude vodit.@Izaiáš 11,6"
+
 
     out(inCzech)
 }
 
-const val losungsJahr = "21"
+const val losungsJahr = "22"
 
 fun out(`in`: String?) {
     val st = StringTokenizer(`in`, "@")
