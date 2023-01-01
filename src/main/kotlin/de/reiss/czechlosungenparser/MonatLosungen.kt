@@ -3,24 +3,26 @@ package de.reiss.czechlosungenparser
 import java.util.*
 
 fun main() {
-    val inCzech = "@Ježíš Kristus praví: Pojďte a uvidíte!@Jan 1,39" +
-            "@Hněváte-li se, nehřešte. Nenechte nad svým hněvem zapadnout slunce.@Efezským 4,26" +
-            "@V každý čas se v Duchu svatém modlete a proste, bděte na modlitbách a vytrvale se přimlouvejte za všechny bratry.@Efezským 6,18" +
-            "@Marie Magdalská šla k učedníkům a oznámila jim: Viděla jsem Pána a toto mi řekl.@Jan 20,18" +
-            "@Modlím se za tebe, milovaný, aby se ti ve všem dobře dařilo a abys byl zdráv – tak jako se dobře daří tvé duši.@3.Janova 1,2" +
-            "@Polož si mě na srdce jako pečeť, jako pečeť na své rámě. Vždyť silná jako smrt je láska.@Píseň 8,6" +
-            "@Po Bohu žízním, po živém Bohu.@Žalm 42,3" +
-            "@Tehdy zaplesají stromy v lese vstříc Hospodinu, že přichází soudit zemi.@1.Paralipomenon 16,33" +
-            "@Láska k Bohu je ta nejvznešenější moudrost.@Sírachovec 1,10 L17" +
-            "@Veliké a podivuhodné jsou tvé činy, Pane Bože všemohoucí; spravedlivé a pravdivé jsou tvé cesty, Králi národů.@Zjevení 15,3" +
-            "@Běda těm, kdo říkají zlu dobro a dobru zlo, kdo vydávají tmu za světlo a světlo za tmu, kdo vydávají hořké za sladké a sladké za hořké!@Izaiáš 5,20" +
-            "@Vlk bude pobývat s beránkem, levhart s kůzletem odpočívat. Tele a lvíče i žírný dobytek budou spolu a malý hoch je bude vodit.@Izaiáš 11,6"
+    val inCzech = buildString {
+        append("@Bůh viděl, že všechno, co učinil, je velmi dobré.@1.Mojžíšova 1,31")
+        append("@Tu Sára řekla: \"Bůh mi dopřál, že se mohu smát.\"@1.Mojžíšova 21,6")
+        append("@Kdo nás odloučí od lásky Kristovy?@Římanům 8,35")
+        append("@Proto Kristus umřel i ožil, aby se stal Pánem i mrtvých i živých.@Římanům 14,9")
+        append("@Neodpírej dobrodiní těm, kteří je potřebují, je-li v tvé moci je prokázat.@Přísloví 3,27")
+        append("@Dej ti Bůh z rosy nebes a ze žírnosti země, i hojnost obilí a moštu.@1.Mojžíšova 27,28")
+        append("@Já však vám pravím: Milujte své nepřátele a modlete se za ty, kdo vás pronásledují, abyste byli syny nebeského Otce.@Matouš 5,44-45")
+        append("@Neboť ty jsi má pomoc, a proto ve stínu tvých křídel se budu radovat.@Žalm 63,8 F")
+        append("@Řekl jim: \"A za koho mě pokládáte vy?\"@Matouš 16,15")
+        append("@Podle slova však také jednejte, nebuďte jen posluchači – to byste klamali sami sebe.@Jakubova 1,22")
+        append("@Sám nebesa roztahuje, kráčí po hřebenech mořských vln, on udělal souhvězdí Lva, Orióna i Plejády a souhvězdí jižní.@Jób 9,8-9")
+        append("@Mé oči viděly tvé spasení, které jsi připravil přede všemi národy.@Lukáš 2,30-31")
+    }
 
 
     out(inCzech)
 }
 
-const val losungsJahr = "22"
+const val losungsJahr = "23"
 
 fun out(`in`: String?) {
     val st = StringTokenizer(`in`, "@")
